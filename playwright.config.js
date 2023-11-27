@@ -33,6 +33,12 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // Get auth data for tests
+    {
+      name: 'setup',
+      testMatch: /.*\.setup\.ts/
+    },
+
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
